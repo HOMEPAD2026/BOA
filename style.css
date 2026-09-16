@@ -219,11 +219,10 @@ header,.hero,.marquee,.section,footer{position:relative;z-index:1;}
 
 /* ---------- floating utility dock ---------- */
 .dock{
-  position:fixed;left:50%;bottom:22px;transform:translateX(-50%);z-index:45;
-  display:flex;align-items:center;gap:4px;
-  background:rgba(7,28,56,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
-  border:1px solid var(--line);border-radius:100px;
-  padding:8px;box-shadow:0 16px 40px rgba(0,8,20,.5);
+  position:fixed;left:50%;bottom:20px;transform:translateX(-50%);z-index:45;
+  display:flex;align-items:center;gap:2px;
+  background:#0a2140;border:1px solid rgba(120,170,230,.28);border-radius:100px;
+  padding:7px;box-shadow:0 16px 40px rgba(0,8,20,.6),0 0 0 6px rgba(2,19,42,.55);
 }
 .dock-item{
   position:relative;width:44px;height:44px;border-radius:50%;background:none;border:none;cursor:pointer;
