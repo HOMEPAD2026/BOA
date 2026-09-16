@@ -1,11 +1,17 @@
 // ---------- "Build on Arc" nav dropdown ----------
 const navDropdown = document.getElementById("nav-dropdown");
 const navDropdownTrigger = document.getElementById("nav-dropdown-trigger");
+let openBuildDropdown = () => {};
 if (navDropdown && navDropdownTrigger) {
   const closeDropdown = () => {
     navDropdown.classList.remove("is-open");
     navDropdownTrigger.setAttribute("aria-expanded", "false");
   };
+  const openDropdown = () => {
+    navDropdown.classList.add("is-open");
+    navDropdownTrigger.setAttribute("aria-expanded", "true");
+  };
+  openBuildDropdown = openDropdown;
   navDropdownTrigger.addEventListener("click", (e) => {
     e.stopPropagation();
     const willOpen = !navDropdown.classList.contains("is-open");
@@ -17,6 +23,21 @@ if (navDropdown && navDropdownTrigger) {
   });
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeDropdown();
+  });
+}
+
+// ---------- Floating utility dock ----------
+// Nothing here is live yet — tapping any icon scrolls up and opens the
+// same "Build on Arc" panel so the person lands on the real status/
+// description instead of a dead click.
+const dockItems = document.querySelectorAll(".dock-item");
+if (dockItems.length) {
+  dockItems.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      e.stopPropagation();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      openBuildDropdown();
+    });
   });
 }
 
