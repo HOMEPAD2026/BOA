@@ -58,7 +58,7 @@ header,.hero,.marquee,.section,footer{position:relative;z-index:1;}
   font-family:var(--font-display);font-weight:700;font-size:2.2rem;font-size:clamp(1.7rem,3.4vw,2.5rem);
   letter-spacing:-.01em;line-height:1.15;margin:0 0 18px;color:var(--ice);
 }
-.lede{font-size:1.02rem;color:var(--ice-dim);max-width:560px;margin:0 0 36px;}
+.lede{font-size:1.02rem;color:var(--ice-dim);margin:0 0 36px;}
 
 /* ---------- buttons ---------- */
 .btn{
@@ -261,7 +261,7 @@ header,.hero,.marquee,.section,footer{position:relative;z-index:1;}
 }
 .story-chip:hover{transform:translateY(-2px);border-color:var(--blue-bright);}
 .story-chip-accent{border-color:var(--blue-bright);color:var(--blue-bright);}
-.disclaimer{font-size:.74rem;color:var(--ice-dim);opacity:.55;max-width:520px;margin:0;}
+.disclaimer{font-size:.74rem;color:var(--ice-dim);opacity:.55;margin:0;}
 
 /* ---------- why arc: pillars ---------- */
 .pillar-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
