@@ -304,8 +304,14 @@ header,.hero,.marquee,.section,footer{position:relative;z-index:1;}
 .arc-step.is-visible{opacity:1;transform:translateY(0);border-color:var(--blue-bright);}
 .arc-step-num{font-family:var(--font-display);font-weight:600;color:var(--blue-bright);font-size:.75rem;}
 .arc-step-label{font-size:.86rem;color:var(--ice);}
-.arc-graphic{width:min(900px,90vw);margin-bottom:24px;animation:float 5s ease-in-out infinite;}
-.arc-svg{width:100%;height:auto;}
+.arc-showcase{
+  display:flex;align-items:center;gap:48px;width:100%;margin-bottom:36px;
+  background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:28px;
+}
+.arc-showcase-img{flex:0 0 300px;width:300px;border-radius:16px;display:block;}
+.arc-showcase-text{flex:1;text-align:left;}
+.arc-showcase-text p{font-size:1.05rem;color:var(--ice-dim);margin:0 0 12px;}
+.arc-showcase-text p:last-child{font-family:var(--font-display);font-weight:700;color:#fff;font-size:1.25rem;margin:0;}
 .arc-tagline{font-family:var(--font-script);font-size:1.7rem;color:var(--blue-bright);margin:0;transform:rotate(-2deg);}
 @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
 
@@ -416,6 +422,9 @@ header,.hero,.marquee,.section,footer{position:relative;z-index:1;}
   .brand-tag{display:none;}
   .nav-dropdown-panel{position:fixed;top:70px;left:16px;right:16px;transform:translateY(-8px);width:auto;max-width:none;}
   .nav-dropdown.is-open .nav-dropdown-panel{transform:translateY(0);}
+  .arc-showcase{flex-direction:column;gap:20px;padding:20px;text-align:center;}
+  .arc-showcase-img{width:100%;max-width:280px;flex-basis:auto;}
+  .arc-showcase-text{text-align:center;}
 }
 @media (max-width:520px){
   .hero-cards{grid-template-columns:1fr;}
