@@ -295,16 +295,16 @@ header,.hero,.marquee,.section,footer{position:relative;z-index:1;}
 /* ---------- build the arc ---------- */
 .arc-build-section{text-align:center;}
 .arc-build-section .wrap{display:flex;flex-direction:column;align-items:center;}
-.arc-steps{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:8px 0 42px;}
+.arc-steps{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 42px;width:100%;}
 .arc-step{
-  display:flex;align-items:center;gap:10px;padding:12px 20px;border-radius:100px;
+  flex:1 1 200px;display:flex;align-items:center;justify-content:center;gap:10px;padding:16px 20px;border-radius:100px;
   background:var(--panel);border:1px solid var(--line);opacity:.35;transform:translateY(10px);
   transition:opacity .5s ease,transform .5s ease,border-color .3s ease;
 }
 .arc-step.is-visible{opacity:1;transform:translateY(0);border-color:var(--blue-bright);}
 .arc-step-num{font-family:var(--font-display);font-weight:600;color:var(--blue-bright);font-size:.75rem;}
 .arc-step-label{font-size:.86rem;color:var(--ice);}
-.arc-graphic{width:min(400px,80vw);margin-bottom:24px;animation:float 5s ease-in-out infinite;}
+.arc-graphic{width:min(900px,90vw);margin-bottom:24px;animation:float 5s ease-in-out infinite;}
 .arc-svg{width:100%;height:auto;}
 .arc-tagline{font-family:var(--font-script);font-size:1.7rem;color:var(--blue-bright);margin:0;transform:rotate(-2deg);}
 @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
@@ -313,10 +313,10 @@ header,.hero,.marquee,.section,footer{position:relative;z-index:1;}
 .game-section{text-align:center;}
 .game-section .lede{margin-left:auto;margin-right:auto;}
 .game-box{
-  background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:38px 36px;
-  max-width:460px;margin:0 auto;text-align:center;
+  background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:44px 36px;
+  width:100%;text-align:center;
 }
-.game-stats{display:flex;justify-content:center;gap:40px;margin-bottom:26px;}
+.game-stats{display:flex;justify-content:center;gap:80px;margin-bottom:32px;}
 .game-stat{display:flex;flex-direction:column;gap:3px;}
 .game-stat-label{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ice-dim);}
 .game-stat-value{font-family:var(--font-display);font-weight:700;font-size:1.5rem;color:var(--blue-bright);}
