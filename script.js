@@ -27,12 +27,13 @@ if (navDropdown && navDropdownTrigger) {
 }
 
 // ---------- Floating utility dock ----------
-// Nothing here is live yet — tapping any icon scrolls up and opens the
-// same "Build on Arc" panel so the person lands on the real status/
-// description instead of a dead click.
-const dockItems = document.querySelectorAll(".dock-item");
-if (dockItems.length) {
-  dockItems.forEach((item) => {
+// Live items (Directory, Spotlight) are real <a> links and navigate
+// normally. The still-under-construction items are <button>s with
+// nowhere to go yet — tapping one scrolls up and opens the "Build on
+// Arc" panel instead of doing nothing.
+const dockPendingItems = document.querySelectorAll("button.dock-item");
+if (dockPendingItems.length) {
+  dockPendingItems.forEach((item) => {
     item.addEventListener("click", (e) => {
       e.stopPropagation();
       window.scrollTo({ top: 0, behavior: "smooth" });
