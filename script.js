@@ -43,22 +43,27 @@ if (dockPendingItems.length) {
 }
 
 // ---------- Scroll reveal: every .reveal section, plus the Build-the-Arc steps ----------
-// Progressive enhancement: sections are visible by default (see .reveal in
-// style.css — no opacity:0 there), and only get hidden-then-fade-in via the
-// .reveal-pending class added here, right before observing. If JS fails to
-// run at all, the page still shows everything instead of staying blank.
-const revealTargets = document.querySelectorAll(".reveal, .arc-step");
-if (revealTargets.length && "IntersectionObserver" in window) {
-  revealTargets.forEach((el) => el.classList.add("reveal-pending"));
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) entry.target.classList.add("is-visible");
-      });
-    },
-    { threshold: 0.2 }
-  );
-  revealTargets.forEach((el) => observer.observe(el));
+// .reveal-pending lives directly in the HTML now (not added by JS) so
+// sections are invisible from the very first paint — no flash of visible
+// content before JS has a chance to hide it. If IntersectionObserver isn't
+// available, everything is revealed immediately instead of staying stuck
+// invisible; if JS doesn't run at all, the <noscript> style block in
+// <head> forces it visible too.
+const revealTargets = Array.from(document.querySelectorAll(".reveal, .arc-step"));
+if (revealTargets.length) {
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add("is-visible");
+        });
+      },
+      { threshold: 0.2 }
+    );
+    revealTargets.forEach((el) => observer.observe(el));
+  } else {
+    revealTargets.forEach((el) => el.classList.add("is-visible"));
+  }
 }
 
 // ---------- Copy contract address ----------

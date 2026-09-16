@@ -352,6 +352,45 @@ header,.hero,.marquee,.section,footer{position:relative;z-index:1;}
 .game-tap-hint{font-family:var(--font-display);font-weight:500;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ice-dim);}
 .game-result{min-height:1.4em;font-weight:600;color:var(--blue-bright);margin:16px 0 0;}
 
+/* ---------- daily report page ---------- */
+.report-hero{padding-top:64px;}
+.report-theme{
+  font-family:var(--font-display);font-weight:600;font-size:1.05rem;color:var(--ice);
+  border-left:3px solid var(--blue-bright);padding-left:16px;margin:8px 0 0;
+}
+.report-theme strong{color:var(--blue-bright);}
+.report-section .lede{max-width:none;}
+.report-quote-row{display:flex;gap:16px;flex-wrap:wrap;margin:24px 0;}
+.report-quote{flex:1 1 260px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px;}
+.report-quote p{font-family:var(--font-display);font-size:1.05rem;color:#fff;margin:0;font-style:italic;}
+.report-quote-label{display:block;font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px;}
+.report-quote-old .report-quote-label{color:var(--ice-dim);}
+.report-quote-new{border-color:rgba(74,222,128,.35);background:linear-gradient(135deg,rgba(74,222,128,.06),var(--panel) 60%);}
+.report-quote-new .report-quote-label{color:#4ade80;}
+
+.report-mini-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+.report-mini-card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px;}
+.report-mini-title{display:block;font-family:var(--font-display);font-weight:600;font-size:.92rem;color:var(--blue-bright);margin-bottom:8px;}
+.report-mini-card p{font-size:.88rem;color:var(--ice-dim);margin:0;line-height:1.55;}
+
+.opportunity-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.opportunity-card{
+  position:relative;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:26px;
+  display:flex;flex-direction:column;gap:10px;align-items:flex-start;transition:border-color .15s,transform .15s;
+}
+.opportunity-card:hover{border-color:var(--blue-bright);transform:translateY(-3px);}
+.opportunity-num{position:absolute;top:20px;right:22px;font-family:var(--font-display);font-weight:700;font-size:.72rem;color:var(--ice-dim);opacity:.6;}
+.opportunity-card .ic-lg{color:var(--blue-bright);}
+.opportunity-title{font-family:var(--font-display);font-weight:600;font-size:.95rem;color:#fff;}
+.opportunity-desc{font-size:.84rem;color:var(--ice-dim);margin:0;line-height:1.55;}
+
+.report-checklist{display:flex;flex-direction:column;gap:10px;margin:20px 0 28px;max-width:640px;}
+.report-check{
+  font-size:.9rem;color:var(--ice-dim);padding:12px 18px;background:var(--panel);border:1px solid var(--line);
+  border-radius:12px;
+}
+.report-check strong{color:var(--ice);}
+
 /* ---------- builders page ---------- */
 .builders-intro .lede{max-width:640px;}
 .spotlight-card{
@@ -481,6 +520,9 @@ header,.hero,.marquee,.section,footer{position:relative;z-index:1;}
   .hero{padding:60px 0 48px;}
   .pillar-row{grid-template-columns:repeat(2,1fr);}
   .directory-grid{grid-template-columns:1fr;}
+  .report-mini-grid{grid-template-columns:1fr;}
+  .opportunity-grid{grid-template-columns:1fr;}
+  .report-quote-row{flex-direction:column;}
   .community-grid{grid-template-columns:repeat(2,1fr);}
   .token-card{padding:26px;}
   .chart-frame{height:400px;}

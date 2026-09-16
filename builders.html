@@ -14,7 +14,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=9">
+<link rel="stylesheet" href="style.css?v=10">
+<noscript><style>.reveal.reveal-pending{opacity:1 !important;transform:none !important;}</style></noscript>
 </head>
 <body>
 
@@ -39,6 +40,13 @@
           <p class="nav-dropdown-lede">We're not another trading terminal. BOA finds and backs the people actually building on Arc.</p>
         </div>
         <div class="nav-dropdown-list">
+          <a class="nav-item" href="daily.html">
+            <svg viewBox="0 0 24 24" class="ic ic-lg"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+            <div class="nav-item-body">
+              <span class="nav-item-title">Daily Report<span class="status-badge status-live">Live</span></span>
+              <span class="nav-item-text">What Arc builders should build next, daily.</span>
+            </div>
+          </a>
           <a class="nav-item" href="builders.html#directory">
             <svg viewBox="0 0 24 24" class="ic ic-lg"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg>
             <div class="nav-item-body">
@@ -90,7 +98,7 @@
 </header>
 
 <!-- ============ INTRO ============ -->
-<section class="section builders-intro reveal">
+<section class="section builders-intro reveal reveal-pending">
   <div class="wrap">
     <span class="eyebrow">No spectators</span>
     <h1 class="section-title">Find who's building on Arc.</h1>
@@ -99,7 +107,7 @@
 </section>
 
 <!-- ============ BUILDER OF THE WEEK ============ -->
-<section class="section spotlight-section reveal">
+<section class="section spotlight-section reveal reveal-pending">
   <div class="wrap">
     <span class="eyebrow">Builder of the week</span>
     <h2 class="section-title" id="spotlight-name">Loading…</h2>
@@ -108,7 +116,7 @@
 </section>
 
 <!-- ============ DIRECTORY ============ -->
-<section class="section directory-section reveal" id="directory">
+<section class="section directory-section reveal reveal-pending" id="directory">
   <div class="wrap">
     <span class="eyebrow">The directory</span>
     <h2 class="section-title">Building on Arc.</h2>
@@ -136,6 +144,11 @@
 
 <!-- ============ Floating utility dock ============ -->
 <nav class="dock" id="dock" aria-label="BOA utilities">
+  <a class="dock-item" href="daily.html" aria-label="Daily Report — Live">
+    <svg viewBox="0 0 24 24" class="ic"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+    <span class="dock-dot dock-dot-live"></span>
+    <span class="dock-tip">Daily Report<em>Live</em></span>
+  </a>
   <a class="dock-item" href="builders.html#directory" aria-label="Builder Directory — Live">
     <svg viewBox="0 0 24 24" class="ic"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg>
     <span class="dock-dot dock-dot-live"></span>
@@ -167,6 +180,6 @@
 
 <script src="builders-data.js?v=9"></script>
 <script src="builders.js?v=9"></script>
-<script src="script.js?v=9"></script>
+<script src="script.js?v=10"></script>
 </body>
 </html>
