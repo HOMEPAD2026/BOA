@@ -102,15 +102,8 @@
 <section class="section spotlight-section reveal">
   <div class="wrap">
     <span class="eyebrow">Builder of the week</span>
-    <h2 class="section-title">Argus</h2>
-    <div class="spotlight-card">
-      <div class="spotlight-body">
-        <span class="spotlight-tag">Launchpad</span>
-        <p class="spotlight-desc">A permissionless launchpad already live on Arc — every launch opens a real Uniswap v4 pool, taxes are fixed at launch, and there's nothing to migrate. Argus was moving real volume before Arc's own mainnet had even fully opened to the public.</p>
-        <p class="spotlight-why"><strong>Why we picked them:</strong> they showed up and shipped before the ecosystem told them it was safe to. That's the whole BOA thesis.</p>
-        <a class="btn btn-ghost" href="https://argus.world" target="_blank" rel="noopener">Visit argus.world →</a>
-      </div>
-    </div>
+    <h2 class="section-title" id="spotlight-name">Loading…</h2>
+    <div class="spotlight-card" id="spotlight-card"></div>
   </div>
 </section>
 
@@ -119,25 +112,25 @@
   <div class="wrap">
     <span class="eyebrow">The directory</span>
     <h2 class="section-title">Building on Arc.</h2>
-    <p class="lede">A growing list of real projects shipping on Arc. No trackers, no price tables — just who's building what.</p>
+    <p class="lede">Real projects building on Arc, sourced from an independent research pass over the top-100 trending pairs — not a price tracker, just who's building what.</p>
 
-    <div class="directory-grid">
-      <a class="directory-card" href="https://argus.world" target="_blank" rel="noopener">
-        <span class="directory-card-name">Argus</span>
-        <span class="directory-card-tag">Launchpad</span>
-        <p class="directory-card-desc">Permissionless token launchpad, live on Arc with real Uniswap v4 pools from day one.</p>
-      </a>
-      <a class="directory-card" href="https://dyorswap.org" target="_blank" rel="noopener">
-        <span class="directory-card-name">DYOR</span>
-        <span class="directory-card-tag">Launchpad · DEX</span>
-        <p class="directory-card-desc">Multi-chain launch and swap platform with a live presence on Arc.</p>
-      </a>
-      <a class="directory-card directory-card-submit" href="https://x.com/BOAonarc" target="_blank" rel="noopener">
-        <span class="directory-card-name">Your project here</span>
-        <span class="directory-card-tag">Submit</span>
-        <p class="directory-card-desc">Building something real on Arc? DM @BOAonarc and we'll take a look.</p>
-      </a>
+    <div class="directory-controls">
+      <div class="directory-search-wrap">
+        <svg viewBox="0 0 24 24" class="ic directory-search-icon"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input type="search" id="directory-search" class="directory-search" placeholder="Search projects or categories…">
+      </div>
+      <div class="directory-filters" id="directory-filters"></div>
     </div>
+
+    <div class="directory-grid" id="directory-grid"></div>
+    <p class="directory-empty" id="directory-empty">No projects match that search.</p>
+    <p class="directory-count" id="directory-count"></p>
+
+    <a class="directory-card directory-card-submit" href="https://x.com/BOAonarc" target="_blank" rel="noopener">
+      <span class="directory-card-name">Your project here</span>
+      <span class="directory-card-tag">Submit</span>
+      <p class="directory-card-desc">Building something real on Arc? DM @BOAonarc and we'll take a look.</p>
+    </a>
   </div>
 </section>
 
@@ -172,6 +165,8 @@
   </div>
 </footer>
 
+<script src="builders-data.js?v=9"></script>
+<script src="builders.js?v=9"></script>
 <script src="script.js?v=9"></script>
 </body>
 </html>
