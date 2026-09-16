@@ -49,7 +49,6 @@ if (copyBtn && caEl) {
 // ---------- Mini game: Tap to Build ----------
 (() => {
   const tapBtn = document.getElementById("game-tap");
-  const mascot = document.getElementById("game-mascot");
   const tower = document.getElementById("game-tower");
   const timeEl = document.getElementById("game-time");
   const scoreEl = document.getElementById("game-score");
@@ -66,9 +65,9 @@ if (copyBtn && caEl) {
   let timer = null;
 
   const milestoneMessage = (n) => {
-    if (n >= 60) return "Legendary builder! 🏗️";
-    if (n >= 40) return "That's a skyscraper!";
-    if (n >= 25) return "Solid foundation!";
+    if (n >= 60) return "Legendary builder.";
+    if (n >= 40) return "That's a skyscraper.";
+    if (n >= 25) return "Solid foundation.";
     if (n >= 10) return "Nice work, builder.";
     return "Every build starts small.";
   };

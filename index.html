@@ -7,13 +7,13 @@
 <meta name="description" content="BOA is a community builder-meme on Circle's Arc chain. Born from the community, powered by builders.">
 <meta property="og:title" content="BOA — Build On Arc">
 <meta property="og:description" content="Born from the community. Powered by builders. Built on Arc.">
-<meta property="og:image" content="images/hero.jpg">
+<meta property="og:image" content="images/mascot.jpg">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="images/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -36,11 +36,17 @@
       <a href="#community">Community</a>
     </nav>
     <div class="header-actions">
-      <a class="icon-btn" href="#" target="_blank" rel="noopener" aria-label="BOA on X">𝕏</a>
-      <a class="icon-btn" href="#" target="_blank" rel="noopener" aria-label="BOA on Telegram">✈</a>
+      <a class="icon-btn" href="#" target="_blank" rel="noopener" aria-label="BOA on X">
+        <svg viewBox="0 0 24 24" class="ic ic-fill"><path d="M17.2 3H20l-6.6 7.5L21 21h-5.8l-4.6-6-5.2 6H2.6l7-8L3 3h6l4.1 5.4L17.2 3zm-1 16h1.6L7.7 4.6H6L16.2 19z"/></svg>
+      </a>
+      <a class="icon-btn" href="#" target="_blank" rel="noopener" aria-label="BOA on Telegram">
+        <svg viewBox="0 0 24 24" class="ic"><path d="M21 4.5 3.3 11.4c-.9.35-.86 1.1.05 1.35l4.4 1.37 1.68 5.15c.25.7.9.77 1.37.3l2.4-2.34 4.6 3.4c.62.38 1.2.14 1.37-.6L21.9 5.6c.22-.9-.32-1.36-.9-1.1zM8.3 13.9l9.1-5.7c.4-.25.5-.1.2.17l-7.4 6.7-.3 3.1-1.6-4.27z"/></svg>
+      </a>
       <a class="btn btn-primary btn-small" href="https://dyorswap.org/token?address=0x78509bCee65A29d1F9571f07108037C0CD560000&chainId=5042" target="_blank" rel="noopener">Buy $BOA</a>
     </div>
-    <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Menu">☰</button>
+    <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <svg viewBox="0 0 24 24" class="ic"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
   </div>
   <div class="mobile-nav" id="mobile-nav">
     <a href="#top">Home</a>
@@ -52,34 +58,78 @@
   </div>
 </header>
 
-<!-- ============ HERO ============ -->
+<!-- ============ HERO — fully coded, no artwork image ============ -->
 <section class="hero">
-  <div class="hero-media">
-    <img class="hero-bg" src="images/hero.jpg" alt="BOA — Build On Arc. A builder character overlooking a glowing arc bridge and a futuristic city skyline.">
+  <div class="hero-arc" aria-hidden="true">
+    <svg viewBox="0 0 900 420" preserveAspectRatio="xMidYMax meet">
+      <defs>
+        <linearGradient id="heroArcGrad" x1="0" y1="1" x2="1" y2="1">
+          <stop offset="0" stop-color="#1c4a86" stop-opacity=".0"/>
+          <stop offset=".5" stop-color="#6bb6ff"/>
+          <stop offset="1" stop-color="#1c4a86" stop-opacity=".0"/>
+        </linearGradient>
+      </defs>
+      <path d="M60 420 C 60 60, 840 60, 840 420" fill="none" stroke="url(#heroArcGrad)" stroke-width="3"/>
+      <path d="M140 420 C 140 130, 760 130, 760 420" fill="none" stroke="url(#heroArcGrad)" stroke-width="2" opacity=".55"/>
+      <path d="M220 420 C 220 200, 680 200, 680 420" fill="none" stroke="url(#heroArcGrad)" stroke-width="1.5" opacity=".3"/>
+    </svg>
+  </div>
+
+  <div class="wrap hero-inner">
+    <img class="hero-mascot" src="images/favicon.png" alt="BOA mascot">
+    <div class="hero-kicker">Build on Arc</div>
+    <h1 class="hero-wordmark">BOA</h1>
+    <p class="hero-sub">Born from the community.<br>Powered <span>by builders.</span></p>
+    <div class="hero-cta-row">
+      <a class="btn btn-primary btn-large" href="https://dyorswap.org/token?address=0x78509bCee65A29d1F9571f07108037C0CD560000&chainId=5042" target="_blank" rel="noopener">Buy $BOA <span class="btn-arrow">→</span></a>
+      <a class="btn btn-ghost btn-large" href="#community">Join Community <span class="btn-arrow">→</span></a>
+    </div>
+    <div class="hero-script">A bigger tomorrow</div>
+  </div>
+
+  <div class="wrap">
+    <div class="hero-cards">
+      <div class="hero-card">
+        <svg viewBox="0 0 24 24" class="ic ic-lg"><circle cx="9" cy="8" r="3.2"/><path d="M2.8 19.5c0-3.4 2.8-6.2 6.2-6.2s6.2 2.8 6.2 6.2"/><circle cx="17" cy="9" r="2.4"/><path d="M15 13.4c2.6.6 4.6 2.9 4.6 5.7"/></svg>
+        <div class="hero-card-body"><span class="hero-card-title">Community First</span><span class="hero-card-text">Built by the community, for the community.</span></div>
+      </div>
+      <div class="hero-card">
+        <svg viewBox="0 0 24 24" class="ic ic-lg"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3 17.8V21h3.2l6.3-6.3a4 4 0 0 0 5.2-5.4l-2.6 2.6-2.4-.6-.6-2.4 2.6-2.6z"/></svg>
+        <div class="hero-card-body"><span class="hero-card-title">Builder Culture</span><span class="hero-card-text">Supporting creators, builders and innovators.</span></div>
+      </div>
+      <div class="hero-card">
+        <svg viewBox="0 0 24 24" class="ic ic-lg"><path d="M4 20V14M10 20V9M16 20V12M22 20H2M16 4l4 0 0 4M20 4l-6 6"/></svg>
+        <div class="hero-card-body"><span class="hero-card-title">On Arc</span><span class="hero-card-text">A new home for bigger opportunities.</span></div>
+      </div>
+      <div class="hero-card">
+        <svg viewBox="0 0 24 24" class="ic ic-lg"><path d="M8.5 8.5c-4.7 0-4.7 7 0 7 3.5 0 3.5-7 7-7 4.7 0 4.7 7 0 7-3.5 0-3.5-7-7-7z"/></svg>
+        <div class="hero-card-body"><span class="hero-card-title">Long Term</span><span class="hero-card-text">More builders. A bigger tomorrow.</span></div>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- ============ MARQUEE ============ -->
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
-    <span>BUILD ON ARC</span><span class="dot">✦</span>
-    <span>BORN FROM THE COMMUNITY</span><span class="dot">✦</span>
-    <span>POWERED BY BUILDERS</span><span class="dot">✦</span>
-    <span>EVERYONE CAN BUILD</span><span class="dot">✦</span>
-    <span>A BIGGER TOMORROW</span><span class="dot">✦</span>
-    <span>BUILD ON ARC</span><span class="dot">✦</span>
-    <span>BORN FROM THE COMMUNITY</span><span class="dot">✦</span>
-    <span>POWERED BY BUILDERS</span><span class="dot">✦</span>
-    <span>EVERYONE CAN BUILD</span><span class="dot">✦</span>
-    <span>A BIGGER TOMORROW</span><span class="dot">✦</span>
+    <span>Build on Arc</span><span class="dot"></span>
+    <span>Born from the community</span><span class="dot"></span>
+    <span>Powered by builders</span><span class="dot"></span>
+    <span>Everyone can build</span><span class="dot"></span>
+    <span>A bigger tomorrow</span><span class="dot"></span>
+    <span>Build on Arc</span><span class="dot"></span>
+    <span>Born from the community</span><span class="dot"></span>
+    <span>Powered by builders</span><span class="dot"></span>
+    <span>Everyone can build</span><span class="dot"></span>
+    <span>A bigger tomorrow</span><span class="dot"></span>
   </div>
 </div>
 
 <!-- ============ STORY — why BOA ============ -->
 <section class="section story-section reveal" id="story">
   <div class="wrap">
-    <span class="eyebrow">the origin</span>
-    <h2 class="section-title">From BOB <span class="arrow-sep">→</span> to BOA.</h2>
+    <span class="eyebrow">The origin</span>
+    <h2 class="section-title">From BOB to BOA.</h2>
     <p class="lede">BOB showed how a simple builder meme could become a community movement on BNB. BOA carries that builder spirit into a new frontier.</p>
     <div class="story-row">
       <div class="story-chip">A new chain.</div>
@@ -93,14 +143,26 @@
 <!-- ============ WHY ARC ============ -->
 <section class="section why-section reveal">
   <div class="wrap">
-    <span class="eyebrow">the philosophy</span>
+    <span class="eyebrow">The philosophy</span>
     <h2 class="section-title">Why Arc?</h2>
     <p class="lede">Every new chain needs builders. Developers build protocols. Creators build culture. Communities build movements. BOA is for everyone building on Arc.</p>
     <div class="pillar-row">
-      <div class="pillar-card"><span class="pillar-icon">🧱</span><span class="pillar-word">Build</span></div>
-      <div class="pillar-card"><span class="pillar-icon">🎨</span><span class="pillar-word">Create</span></div>
-      <div class="pillar-card"><span class="pillar-icon">🔗</span><span class="pillar-word">Connect</span></div>
-      <div class="pillar-card"><span class="pillar-icon">🌱</span><span class="pillar-word">Grow</span></div>
+      <div class="pillar-card">
+        <svg viewBox="0 0 24 24" class="ic ic-lg"><path d="M3 21h18M5 21V10l7-6 7 6v11M9 21v-6h6v6"/></svg>
+        <span class="pillar-word">Build</span>
+      </div>
+      <div class="pillar-card">
+        <svg viewBox="0 0 24 24" class="ic ic-lg"><path d="M12 19l7-7a3.5 3.5 0 0 0-5-5l-7 7v5h5zM15 6l3 3"/></svg>
+        <span class="pillar-word">Create</span>
+      </div>
+      <div class="pillar-card">
+        <svg viewBox="0 0 24 24" class="ic ic-lg"><path d="M9.5 14.5 14.5 9.5M8 16a4 4 0 0 1-5.6-5.7l2.3-2.4A4 4 0 0 1 10.4 8M16 8a4 4 0 0 1 5.6 5.7l-2.3 2.4a4 4 0 0 1-5.7-.1"/></svg>
+        <span class="pillar-word">Connect</span>
+      </div>
+      <div class="pillar-card">
+        <svg viewBox="0 0 24 24" class="ic ic-lg"><path d="M12 21V11M12 11c0-4 2.5-6.5 7-6.5 0 4-2.5 6.5-7 6.5zM12 14c0-3-2-5-5.5-5 0 3 2 5 5.5 5z"/></svg>
+        <span class="pillar-word">Grow</span>
+      </div>
     </div>
   </div>
 </section>
@@ -111,11 +173,26 @@
     <h2 class="section-title">Everyone can build.</h2>
     <p class="lede">Different skills. Different backgrounds. One Arc.</p>
     <div class="role-row">
-      <div class="role-card"><span class="role-icon">👨‍💻</span><span class="role-label">Dev</span></div>
-      <div class="role-card"><span class="role-icon">🎨</span><span class="role-label">Creator</span></div>
-      <div class="role-card"><span class="role-icon">📈</span><span class="role-label">Trader</span></div>
-      <div class="role-card"><span class="role-icon">👥</span><span class="role-label">Community</span></div>
-      <div class="role-card"><span class="role-icon">👷</span><span class="role-label">Builder</span></div>
+      <div class="role-card">
+        <svg viewBox="0 0 24 24" class="ic ic-lg"><path d="M8 8 4 12l4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg>
+        <span class="role-label">Dev</span>
+      </div>
+      <div class="role-card">
+        <svg viewBox="0 0 24 24" class="ic ic-lg"><path d="M12 19l7-7a3.5 3.5 0 0 0-5-5l-7 7v5h5z"/></svg>
+        <span class="role-label">Creator</span>
+      </div>
+      <div class="role-card">
+        <svg viewBox="0 0 24 24" class="ic ic-lg"><path d="M3 17l6-6 4 4 7-8M20 7h-5M20 7v5"/></svg>
+        <span class="role-label">Trader</span>
+      </div>
+      <div class="role-card">
+        <svg viewBox="0 0 24 24" class="ic ic-lg"><circle cx="9" cy="8" r="3.2"/><path d="M2.8 19.5c0-3.4 2.8-6.2 6.2-6.2s6.2 2.8 6.2 6.2"/><circle cx="17" cy="9" r="2.4"/><path d="M15 13.4c2.6.6 4.6 2.9 4.6 5.7"/></svg>
+        <span class="role-label">Community</span>
+      </div>
+      <div class="role-card">
+        <svg viewBox="0 0 24 24" class="ic ic-lg"><path d="M14 5l5 5-9.5 9.5H4.5V14.5L14 5zM12 7l5 5M4 21h16"/></svg>
+        <span class="role-label">Builder</span>
+      </div>
     </div>
   </div>
 </section>
@@ -123,7 +200,7 @@
 <!-- ============ LIVE CHART ============ -->
 <section class="section chart-section reveal" id="chart">
   <div class="wrap">
-    <span class="eyebrow">live on arc</span>
+    <span class="eyebrow">Live on Arc</span>
     <h2 class="section-title">Watch it move.</h2>
     <p class="lede">Real-time $BOA price, straight from the chain.</p>
     <div class="chart-frame">
@@ -147,14 +224,14 @@
     <div class="arc-graphic" aria-hidden="true">
       <svg viewBox="0 0 400 160" class="arc-svg"><path d="M20 150 C 20 30, 380 30, 380 150" fill="none" stroke="url(#arcGrad)" stroke-width="14" stroke-linecap="round"/><defs><linearGradient id="arcGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1c4a86"/><stop offset="1" stop-color="#6bb6ff"/></linearGradient></defs></svg>
     </div>
-    <p class="arc-tagline">A bigger tomorrow.</p>
+    <p class="arc-tagline">A bigger tomorrow</p>
   </div>
 </section>
 
 <!-- ============ MINI GAME ============ -->
 <section class="section game-section reveal" id="play">
   <div class="wrap">
-    <span class="eyebrow">take a break</span>
+    <span class="eyebrow">Take a break</span>
     <h2 class="section-title">Tap to Build.</h2>
     <p class="lede">10 seconds. How many bricks can you stack? Tap BOA as fast as you can.</p>
 
@@ -180,7 +257,7 @@
 <!-- ============ $BOA TOKEN ============ -->
 <section class="section token-section reveal" id="token">
   <div class="wrap">
-    <span class="eyebrow">the token</span>
+    <span class="eyebrow">The token</span>
     <h2 class="section-title">$BOA</h2>
     <p class="lede">The builder meme of Arc.</p>
 
@@ -200,7 +277,7 @@
       <div class="token-btn-row">
         <a class="btn btn-primary" href="https://dyorswap.org/token?address=0x78509bCee65A29d1F9571f07108037C0CD560000&chainId=5042" target="_blank" rel="noopener">Buy on DYOR</a>
         <a class="btn btn-ghost" href="#chart">View Chart</a>
-        <a class="btn btn-ghost" href="https://explorer.arc.io/address/0x78509bCee65A29d1F9571f07108037C0CD560000" target="_blank" rel="noopener">Explorer ↗</a>
+        <a class="btn btn-ghost" href="https://explorer.arc.io/address/0x78509bCee65A29d1F9571f07108037C0CD560000" target="_blank" rel="noopener">Explorer</a>
       </div>
     </div>
   </div>
@@ -209,16 +286,31 @@
 <!-- ============ COMMUNITY ============ -->
 <section class="section community-section reveal" id="community">
   <div class="wrap">
-    <span class="eyebrow">no spectators</span>
+    <span class="eyebrow">No spectators</span>
     <h2 class="section-title">Built by the community.</h2>
     <p class="lede">Everyone can build something.</p>
     <div class="community-grid">
-      <div class="community-card"><span class="community-icon">🎭</span>Create a meme</div>
-      <div class="community-card"><span class="community-icon">📝</span>Make content</div>
-      <div class="community-card"><span class="community-icon">🛠️</span>Build a tool</div>
-      <div class="community-card"><span class="community-icon">📣</span>Spread BOA</div>
+      <div class="community-card">
+        <svg viewBox="0 0 24 24" class="ic ic-lg"><circle cx="12" cy="12" r="9"/><path d="M8.5 14.5c1 1.2 2.2 1.8 3.5 1.8s2.5-.6 3.5-1.8M9 9.5h.01M15 9.5h.01"/></svg>
+        Create a meme
+      </div>
+      <div class="community-card">
+        <svg viewBox="0 0 24 24" class="ic ic-lg"><path d="M6 3h9l4 4v14H6zM15 3v4h4M9 12h6M9 16h6"/></svg>
+        Make content
+      </div>
+      <div class="community-card">
+        <svg viewBox="0 0 24 24" class="ic ic-lg"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3 17.8V21h3.2l6.3-6.3a4 4 0 0 0 5.2-5.4l-2.6 2.6-2.4-.6-.6-2.4 2.6-2.6z"/></svg>
+        Build a tool
+      </div>
+      <div class="community-card">
+        <svg viewBox="0 0 24 24" class="ic ic-lg"><path d="M3 11l14-5v12L3 13v-2zM17 8.5c2 .4 3 1.6 3 3s-1 2.6-3 3M7 13.5V19l3 1v-5.5"/></svg>
+        Spread BOA
+      </div>
     </div>
-    <a class="btn btn-x" href="#" target="_blank" rel="noopener">𝕏 Join the community</a>
+    <a class="btn btn-x" href="#" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" class="ic ic-fill"><path d="M17.2 3H20l-6.6 7.5L21 21h-5.8l-4.6-6-5.2 6H2.6l7-8L3 3h6l4.1 5.4L17.2 3zm-1 16h1.6L7.7 4.6H6L16.2 19z"/></svg>
+      Join the community
+    </a>
   </div>
 </section>
 
@@ -226,15 +318,15 @@
 <section class="section final-section reveal">
   <div class="wrap">
     <h2 class="final-title">We're just getting started.</h2>
-    <p class="final-sub">Build on Arc. Build with BOA. 👷</p>
-    <a class="btn btn-primary btn-large" href="#community">Join the builders →</a>
+    <p class="final-sub">Build on Arc. Build with BOA.</p>
+    <a class="btn btn-primary btn-large" href="#community">Join the builders <span class="btn-arrow">→</span></a>
   </div>
 </section>
 
 <footer class="site-footer">
   <div class="wrap footer-inner">
-    <span class="footer-brand">$BOA | BUILD ON ARC</span>
-    <span class="footer-ticker">BUILD · CONNECT · BELONG</span>
+    <span class="footer-brand">$BOA&nbsp;&nbsp;|&nbsp;&nbsp;BUILD ON ARC</span>
+    <span class="footer-ticker">BUILD&nbsp;&nbsp;·&nbsp;&nbsp;CONNECT&nbsp;&nbsp;·&nbsp;&nbsp;BELONG</span>
   </div>
 </footer>
 
