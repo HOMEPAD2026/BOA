@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Build — BOA</title>
+<meta name="description" content="A builder utility for Arc, from BOA. Coming soon.">
+<meta property="og:title" content="Build — BOA">
+<meta property="og:description" content="A builder utility for Arc, from BOA. Coming soon.">
+<meta property="og:image" content="images/mascot.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+<div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <img class="brand-icon" src="images/favicon.png" alt="">
+      <span class="brand-text"><span class="brand-mark">BOA</span><span class="brand-tag">BUILD ON ARC</span></span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="build.html" class="is-active">Build</a>
+      <a href="index.html#story">About</a>
+      <a href="index.html#chart">Chart</a>
+      <a href="index.html#play">Play</a>
+      <a href="index.html#token">Token</a>
+      <a href="index.html#community">Community</a>
+    </nav>
+    <div class="header-actions">
+      <a class="icon-btn" href="https://x.com/BOAonarc" target="_blank" rel="noopener" aria-label="BOA on X">
+        <svg viewBox="0 0 24 24" class="ic ic-fill"><path d="M17.2 3H20l-6.6 7.5L21 21h-5.8l-4.6-6-5.2 6H2.6l7-8L3 3h6l4.1 5.4L17.2 3zm-1 16h1.6L7.7 4.6H6L16.2 19z"/></svg>
+      </a>
+      <a class="icon-btn" href="#" target="_blank" rel="noopener" aria-label="BOA on Telegram">
+        <svg viewBox="0 0 24 24" class="ic"><path d="M21 4.5 3.3 11.4c-.9.35-.86 1.1.05 1.35l4.4 1.37 1.68 5.15c.25.7.9.77 1.37.3l2.4-2.34 4.6 3.4c.62.38 1.2.14 1.37-.6L21.9 5.6c.22-.9-.32-1.36-.9-1.1zM8.3 13.9l9.1-5.7c.4-.25.5-.1.2.17l-7.4 6.7-.3 3.1-1.6-4.27z"/></svg>
+      </a>
+      <a class="btn btn-primary btn-small" href="https://dyorswap.org/token?address=0x78509bCee65A29d1F9571f07108037C0CD560000&chainId=5042" target="_blank" rel="noopener">Buy $BOA</a>
+    </div>
+    <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <svg viewBox="0 0 24 24" class="ic"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="build.html">Build</a>
+    <a href="index.html#story">About</a>
+    <a href="index.html#chart">Chart</a>
+    <a href="index.html#play">Play</a>
+    <a href="index.html#token">Token</a>
+    <a href="index.html#community">Community</a>
+  </div>
+</header>
+
+<!-- ============ BUILD — coming soon ============ -->
+<section class="hero build-hero">
+  <div class="hero-arc" aria-hidden="true">
+    <svg viewBox="0 0 900 420" preserveAspectRatio="xMidYMax meet">
+      <defs>
+        <linearGradient id="buildArcGrad" x1="0" y1="1" x2="1" y2="1">
+          <stop offset="0" stop-color="#1c4a86" stop-opacity=".0"/>
+          <stop offset=".5" stop-color="#6bb6ff"/>
+          <stop offset="1" stop-color="#1c4a86" stop-opacity=".0"/>
+        </linearGradient>
+      </defs>
+      <path d="M60 420 C 60 60, 840 60, 840 420" fill="none" stroke="url(#buildArcGrad)" stroke-width="3"/>
+      <path d="M140 420 C 140 130, 760 130, 760 420" fill="none" stroke="url(#buildArcGrad)" stroke-width="2" opacity=".55"/>
+    </svg>
+  </div>
+
+  <div class="wrap hero-inner">
+    <span class="coming-soon-pill">
+      <svg viewBox="0 0 24 24" class="ic"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3 17.8V21h3.2l6.3-6.3a4 4 0 0 0 5.2-5.4l-2.6 2.6-2.4-.6-.6-2.4 2.6-2.6z"/></svg>
+      Coming soon
+    </span>
+    <h1 class="build-title">A builder utility<br>for <span>Arc</span>.</h1>
+    <p class="build-sub">BOA is building a small toolkit for everyone shipping on Arc — builders, creators, and the community around them. Not live yet. When it is, this is where you'll find it.</p>
+    <div class="hero-cta-row">
+      <a class="btn btn-primary btn-large" href="https://x.com/BOAonarc" target="_blank" rel="noopener">Follow for updates <span class="btn-arrow">→</span></a>
+      <a class="btn btn-ghost btn-large" href="index.html">Back to home</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span class="footer-brand">$BOA&nbsp;&nbsp;|&nbsp;&nbsp;BUILD ON ARC</span>
+    <span class="footer-ticker">BUILD&nbsp;&nbsp;·&nbsp;&nbsp;CONNECT&nbsp;&nbsp;·&nbsp;&nbsp;BELONG</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
