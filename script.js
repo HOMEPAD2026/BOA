@@ -1,10 +1,22 @@
-// ---------- Mobile nav toggle ----------
-const navToggle = document.getElementById("nav-toggle");
-const mobileNav = document.getElementById("mobile-nav");
-if (navToggle && mobileNav) {
-  navToggle.addEventListener("click", () => mobileNav.classList.toggle("is-open"));
-  mobileNav.querySelectorAll("a").forEach((a) => {
-    a.addEventListener("click", () => mobileNav.classList.remove("is-open"));
+// ---------- "Build on Arc" nav dropdown ----------
+const navDropdown = document.getElementById("nav-dropdown");
+const navDropdownTrigger = document.getElementById("nav-dropdown-trigger");
+if (navDropdown && navDropdownTrigger) {
+  const closeDropdown = () => {
+    navDropdown.classList.remove("is-open");
+    navDropdownTrigger.setAttribute("aria-expanded", "false");
+  };
+  navDropdownTrigger.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const willOpen = !navDropdown.classList.contains("is-open");
+    navDropdown.classList.toggle("is-open", willOpen);
+    navDropdownTrigger.setAttribute("aria-expanded", String(willOpen));
+  });
+  document.addEventListener("click", (e) => {
+    if (!navDropdown.contains(e.target)) closeDropdown();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeDropdown();
   });
 }
 
