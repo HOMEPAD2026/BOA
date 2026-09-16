@@ -10,7 +10,7 @@
 <meta property="og:image" content="images/hero.jpg">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:,">
+<link rel="icon" href="images/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -18,28 +18,35 @@
 </head>
 <body>
 
+<div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+<div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+
 <header class="site-header" id="top">
   <div class="header-inner">
     <a class="brand" href="#top">
-      <span class="brand-mark">BOA</span>
-      <span class="brand-tag">BUILD ON ARC</span>
+      <img class="brand-icon" src="images/favicon.png" alt="">
+      <span class="brand-text"><span class="brand-mark">BOA</span><span class="brand-tag">BUILD ON ARC</span></span>
     </a>
     <nav class="main-nav">
       <a href="#top">Home</a>
       <a href="#story">About</a>
+      <a href="#chart">Chart</a>
+      <a href="#play">Play</a>
       <a href="#token">Token</a>
       <a href="#community">Community</a>
     </nav>
     <div class="header-actions">
       <a class="icon-btn" href="#" target="_blank" rel="noopener" aria-label="BOA on X">𝕏</a>
       <a class="icon-btn" href="#" target="_blank" rel="noopener" aria-label="BOA on Telegram">✈</a>
-      <a class="btn btn-primary btn-small" href="#token">Buy $BOA</a>
+      <a class="btn btn-primary btn-small" href="https://dyorswap.org/token?address=0x78509bCee65A29d1F9571f07108037C0CD560000&chainId=5042" target="_blank" rel="noopener">Buy $BOA</a>
     </div>
     <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Menu">☰</button>
   </div>
   <div class="mobile-nav" id="mobile-nav">
     <a href="#top">Home</a>
     <a href="#story">About</a>
+    <a href="#chart">Chart</a>
+    <a href="#play">Play</a>
     <a href="#token">Token</a>
     <a href="#community">Community</a>
   </div>
@@ -52,8 +59,24 @@
   </div>
 </section>
 
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>BUILD ON ARC</span><span class="dot">✦</span>
+    <span>BORN FROM THE COMMUNITY</span><span class="dot">✦</span>
+    <span>POWERED BY BUILDERS</span><span class="dot">✦</span>
+    <span>EVERYONE CAN BUILD</span><span class="dot">✦</span>
+    <span>A BIGGER TOMORROW</span><span class="dot">✦</span>
+    <span>BUILD ON ARC</span><span class="dot">✦</span>
+    <span>BORN FROM THE COMMUNITY</span><span class="dot">✦</span>
+    <span>POWERED BY BUILDERS</span><span class="dot">✦</span>
+    <span>EVERYONE CAN BUILD</span><span class="dot">✦</span>
+    <span>A BIGGER TOMORROW</span><span class="dot">✦</span>
+  </div>
+</div>
+
 <!-- ============ STORY — why BOA ============ -->
-<section class="section story-section" id="story">
+<section class="section story-section reveal" id="story">
   <div class="wrap">
     <span class="eyebrow">the origin</span>
     <h2 class="section-title">From BOB <span class="arrow-sep">→</span> to BOA.</h2>
@@ -68,22 +91,22 @@
 </section>
 
 <!-- ============ WHY ARC ============ -->
-<section class="section why-section">
+<section class="section why-section reveal">
   <div class="wrap">
     <span class="eyebrow">the philosophy</span>
     <h2 class="section-title">Why Arc?</h2>
     <p class="lede">Every new chain needs builders. Developers build protocols. Creators build culture. Communities build movements. BOA is for everyone building on Arc.</p>
     <div class="pillar-row">
-      <div class="pillar-card"><span class="pillar-word">Build</span></div>
-      <div class="pillar-card"><span class="pillar-word">Create</span></div>
-      <div class="pillar-card"><span class="pillar-word">Connect</span></div>
-      <div class="pillar-card"><span class="pillar-word">Grow</span></div>
+      <div class="pillar-card"><span class="pillar-icon">🧱</span><span class="pillar-word">Build</span></div>
+      <div class="pillar-card"><span class="pillar-icon">🎨</span><span class="pillar-word">Create</span></div>
+      <div class="pillar-card"><span class="pillar-icon">🔗</span><span class="pillar-word">Connect</span></div>
+      <div class="pillar-card"><span class="pillar-icon">🌱</span><span class="pillar-word">Grow</span></div>
     </div>
   </div>
 </section>
 
 <!-- ============ BUILDER ROLES ============ -->
-<section class="section builder-section">
+<section class="section builder-section reveal">
   <div class="wrap">
     <h2 class="section-title">Everyone can build.</h2>
     <p class="lede">Different skills. Different backgrounds. One Arc.</p>
@@ -97,8 +120,22 @@
   </div>
 </section>
 
+<!-- ============ LIVE CHART ============ -->
+<section class="section chart-section reveal" id="chart">
+  <div class="wrap">
+    <span class="eyebrow">live on arc</span>
+    <h2 class="section-title">Watch it move.</h2>
+    <p class="lede">Real-time $BOA price, straight from the chain.</p>
+    <div class="chart-frame">
+      <iframe
+        src="https://dexscreener.com/arc/0x78509bcee65a29d1f9571f07108037c0cd560000?embed=1&theme=dark&trades=0&info=0"
+        title="$BOA live chart" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
 <!-- ============ BUILD THE ARC — scroll reveal ============ -->
-<section class="section arc-build-section" id="build">
+<section class="section arc-build-section reveal" id="build">
   <div class="wrap">
     <h2 class="section-title">Build the Arc.</h2>
     <div class="arc-steps" id="arc-steps">
@@ -114,8 +151,34 @@
   </div>
 </section>
 
+<!-- ============ MINI GAME ============ -->
+<section class="section game-section reveal" id="play">
+  <div class="wrap">
+    <span class="eyebrow">take a break</span>
+    <h2 class="section-title">Tap to Build.</h2>
+    <p class="lede">10 seconds. How many bricks can you stack? Tap BOA as fast as you can.</p>
+
+    <div class="game-box">
+      <div class="game-stats">
+        <div class="game-stat"><span class="game-stat-label">Time</span><span class="game-stat-value" id="game-time">10</span></div>
+        <div class="game-stat"><span class="game-stat-label">Bricks</span><span class="game-stat-value" id="game-score">0</span></div>
+        <div class="game-stat"><span class="game-stat-label">Best</span><span class="game-stat-value" id="game-best">0</span></div>
+      </div>
+
+      <div class="game-tower" id="game-tower"></div>
+
+      <button type="button" class="game-tap" id="game-tap">
+        <img src="images/mascot.jpg" alt="Tap BOA to build" id="game-mascot">
+        <span class="game-tap-hint" id="game-hint">Tap to start</span>
+      </button>
+
+      <p class="game-result" id="game-result"></p>
+    </div>
+  </div>
+</section>
+
 <!-- ============ $BOA TOKEN ============ -->
-<section class="section token-section" id="token">
+<section class="section token-section reveal" id="token">
   <div class="wrap">
     <span class="eyebrow">the token</span>
     <h2 class="section-title">$BOA</h2>
@@ -125,38 +188,42 @@
       <div class="token-row">
         <div class="token-field"><span class="token-field-label">Network</span><span class="token-field-value">Arc</span></div>
         <div class="token-field"><span class="token-field-label">Ticker</span><span class="token-field-value">$BOA</span></div>
+        <div class="token-field"><span class="token-field-label">Launchpad</span><span class="token-field-value">DYOR</span></div>
       </div>
       <div class="token-ca-row">
         <span class="token-field-label">Contract</span>
-        <span class="token-ca-soon">Coming soon</span>
+        <div class="token-ca-line">
+          <code class="token-ca" id="token-ca">0x78509bCee65A29d1F9571f07108037C0CD560000</code>
+          <button type="button" class="btn-copy" id="copy-ca-btn">Copy</button>
+        </div>
       </div>
       <div class="token-btn-row">
-        <span class="btn btn-primary btn-disabled">Buy $BOA</span>
-        <span class="btn btn-ghost btn-disabled">View Chart</span>
-        <span class="btn btn-ghost btn-disabled">Explorer</span>
+        <a class="btn btn-primary" href="https://dyorswap.org/token?address=0x78509bCee65A29d1F9571f07108037C0CD560000&chainId=5042" target="_blank" rel="noopener">Buy on DYOR</a>
+        <a class="btn btn-ghost" href="#chart">View Chart</a>
+        <a class="btn btn-ghost" href="https://explorer.arc.io/address/0x78509bCee65A29d1F9571f07108037C0CD560000" target="_blank" rel="noopener">Explorer ↗</a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============ COMMUNITY ============ -->
-<section class="section community-section" id="community">
+<section class="section community-section reveal" id="community">
   <div class="wrap">
     <span class="eyebrow">no spectators</span>
     <h2 class="section-title">Built by the community.</h2>
     <p class="lede">Everyone can build something.</p>
     <div class="community-grid">
-      <div class="community-card">Create a meme</div>
-      <div class="community-card">Make content</div>
-      <div class="community-card">Build a tool</div>
-      <div class="community-card">Spread BOA</div>
+      <div class="community-card"><span class="community-icon">🎭</span>Create a meme</div>
+      <div class="community-card"><span class="community-icon">📝</span>Make content</div>
+      <div class="community-card"><span class="community-icon">🛠️</span>Build a tool</div>
+      <div class="community-card"><span class="community-icon">📣</span>Spread BOA</div>
     </div>
     <a class="btn btn-x" href="#" target="_blank" rel="noopener">𝕏 Join the community</a>
   </div>
 </section>
 
 <!-- ============ FINAL CTA ============ -->
-<section class="section final-section">
+<section class="section final-section reveal">
   <div class="wrap">
     <h2 class="final-title">We're just getting started.</h2>
     <p class="final-sub">Build on Arc. Build with BOA. 👷</p>
